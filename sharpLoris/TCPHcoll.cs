@@ -59,6 +59,11 @@ namespace sharpLoris
 			Tcpcli.BeginConnect(_host, _port, ConCallBack, this);
 		}
 
+		public void ReCreate()
+		{
+			new TCPHcoll(_host, _port, _fill);
+		}
+
 		public void Refill()
 		{
 			Bqueue = new Queue<byte>(_fill);

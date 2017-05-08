@@ -21,7 +21,7 @@ namespace sharpLoris
 				Console.WriteLine("Usage: sharpLoris.exe myDomain.de");
 				return;
 			}
-			//http://araz4story.com/
+
 			IPAddress IP;
 			foreach (var item in args)
 			{
@@ -66,7 +66,7 @@ namespace sharpLoris
 				header = Encoding.ASCII.GetBytes(builder.ToString());
 			}
 
-			for (int i = 0; i < 1000; i++)
+			for (int i = 0; i < 500; i++)
 			{
 				new TCPHcoll(target, 80, header);
 			}

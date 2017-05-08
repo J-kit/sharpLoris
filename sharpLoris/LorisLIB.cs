@@ -21,7 +21,10 @@ namespace sharpLoris
 				{
 					return;
 				}
-
+				if (TCPHcoll.bgWrite < 300)
+				{
+					co.ReCreate();
+				}
 				if (!co.Bqueue.Any())
 				{
 					co.Refill();
